@@ -39,9 +39,9 @@ Each directory contains:
 If you're new to GitHub, here's how to get this project on your computer:
 
 1. Install Git:
-   - Windows: Download from [git-scm.com](https://git-scm.com/)
+   - Windows: Download from [gitforwindows.org](https://gitforwindows.org/)
    - Mac: Install Xcode Command Line Tools or use Homebrew
-   - Linux: Use your distribution's package manager (e.g., `sudo apt-get install git` on Ubuntu)
+   - Linux: Use your distribution's package manager (e.g., `sudo apt install git` on Ubuntu)
 
 2. Open a terminal (Command Prompt or PowerShell on Windows, Terminal on Mac/Linux)
 

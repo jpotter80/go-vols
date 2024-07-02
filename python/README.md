@@ -27,8 +27,8 @@ Most Linux distributions come with Python pre-installed. If not:
 1. Open a terminal
 2. Use your distribution's package manager to install Python. For example, on Ubuntu or Debian:
    ```
-   sudo apt-get update
-   sudo apt-get install python3
+   sudo apt update
+   sudo apt install python3
    ```
 3. Verify the installation by typing `python3 --version`
 
