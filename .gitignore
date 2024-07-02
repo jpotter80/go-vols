@@ -5,6 +5,12 @@
 *.obj
 *.class
 
+# Executables without extension
+/c/go_vols
+/cpp/go_vols
+/fortran/go_vols
+/go/go_vols
+
 # Rust
 /rust/target/
 **/*.rs.bk
@@ -49,3 +55,15 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Ensure source files are not ignored
+!*.c
+!*.cpp
+!*.f90
+!*.go
+!*.rs
+!*.py
+!*.java
+!*.js
+!*.sh
+!*.sql
