@@ -13,32 +13,30 @@ Rust is a systems programming language that focuses on safety, speed, and concur
 
 ## Installing Rust and Cargo
 
-### Windows, macOS, and Linux
-1. Open a terminal (Command Prompt or PowerShell on Windows, Terminal on macOS/Linux)
-2. Run the following command:
-   ```
-   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-   ```
-3. Follow the on-screen instructions
-4. After installation, close and reopen your terminal
+Visit https://www.rust-lang.org/tools/install and follow the instructions for your operating system.
 
-Verify the installation by typing `rustc --version` and `cargo --version` in your terminal.
+After installation, open a new terminal or command prompt and verify the installation by typing:
+```
+rustc --version
+cargo --version
+```
 
 ## Project Structure
 
 ```
 rust/
 ├── Cargo.toml  # Project configuration file
-└── src/
-    └── main.rs # Our Rust program
+├── src/
+│   └── go_vols.rs # Our Rust program
+└── target/  # Directory for compiled outputs
 ```
 
 ## Running the Program
 
-1. Open a terminal
-2. Navigate to the `rust` directory within the `go-vols` project:
+1. Open a terminal or command prompt
+2. Navigate to the `rust/src/` directory within the `go-vols` project:
    ```
-   cd path/to/go-vols/rust
+   cd /path/to/go-vols/rust/src/
    ```
 3. Build and run the program:
    ```
@@ -49,7 +47,7 @@ You should see "GO VOLS!" printed to the console.
 
 ## Understanding the Code
 
-Here's what the `src/main.rs` file contains:
+Here's what the `src/go_vols.rs` file contains:
 
 ```rust
 fn main() {
@@ -57,10 +55,30 @@ fn main() {
 }
 ```
 
-- `fn main() { ... }` defines the main function, the entry point of our program.
+- `fn main()` defines the main function, the entry point of our program.
 - `println!("GO VOLS!");` is a macro that prints "GO VOLS!" to the console.
 
-The `Cargo.toml` file is the configuration file for our Rust project. It specifies the project name, version, and any dependencies (though we don't have any for this simple program).
+The `Cargo.toml` file is the configuration file for our Rust project. It specifies the project name, version, and the path to our binary file.
+
+### Rust Edition
+
+In the `Cargo.toml` file, you'll see a line `edition = "2021"`. This specifies the Rust edition being used:
+
+- Editions allow Rust to evolve while maintaining backwards compatibility.
+- The 2021 edition is the latest stable edition as of this project's creation.
+- It includes various language improvements and new features.
+- For our simple program, the edition doesn't significantly impact the code.
+
+## Troubleshooting
+
+If you encounter any issues:
+
+1. Make sure you're in the correct directory when running `cargo run`
+2. Ensure that Rust and Cargo are correctly installed and added to your PATH
+3. Check that the `src/go_vols.rs` file exists and contains the correct code
+4. Verify that the `Cargo.toml` file correctly specifies the path to `go_vols.rs`
+
+If you're still having trouble, try running `cargo clean` followed by `cargo build` to rebuild the project from scratch.
 
 ## Next Steps
 

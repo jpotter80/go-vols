@@ -1,0 +1,51 @@
+# Compiled files
+*.exe
+*.out
+*.o
+*.obj
+*.class
+
+# Rust
+/rust/target/
+**/*.rs.bk
+
+# Go
+*.test
+
+# Python
+__pycache__/
+*.py[cod]
+
+# C/C++
+*.dSYM/
+
+# Fortran
+*.mod
+*.smod
+
+# Java
+*.jar
+
+# JavaScript (Deno)
+*.orig
+*.pyc
+*.swp
+
+# SQL
+*.sqlite
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
