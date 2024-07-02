@@ -72,8 +72,6 @@ Each directory contains:
 - [Understanding Sudo and Permissions](#understanding-sudo-and-permissions)
 - [Why Use the CLI?](#why-use-the-cli)
 
-[... rest of the content ...]
-
 ### Cloning the Repository
 
 If you're new to GitHub, here's how to get this project on your computer:
