@@ -1,0 +1,10 @@
+[package]
+name = "go_vols"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "go_vols"
+path = "go_vols.rs"
