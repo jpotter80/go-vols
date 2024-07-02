@@ -37,6 +37,9 @@ __pycache__/
 *.pyc
 *.swp
 
+# Rust
+.rustc_info.json
+
 # SQL
 *.sqlite
 
