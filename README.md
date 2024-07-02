@@ -1,99 +1,96 @@
-# SQL (PostgreSQL) - GO VOLS!
+# GO VOLS!
 
-This directory contains a simple SQL script that creates a temporary table, inserts "GO VOLS!" into it, and then displays the message.
+Welcome to the GO VOLS! project. This repository contains simple programs in various programming languages that print "GO VOLS!" to the console. It's designed as a fun way for beginners to explore different programming languages and see how they can accomplish the same task.
 
-## What is SQL?
+## What's in this Repository?
 
-SQL (Structured Query Language) is a standard language for managing and manipulating relational databases. It's used to store, retrieve, and analyze data.
+This project includes programs in several programming languages:
 
-## What is PostgreSQL?
+- Python
+- JavaScript (using Deno)
+- Rust
+- SQL (for PostgreSQL)
+- Bash
 
-PostgreSQL is a powerful, open-source relational database system that uses and extends the SQL language.
+Each language has its own directory with the necessary files to run a simple "GO VOLS!" program.
 
-## Requirements
+## Directory Structure
 
-- PostgreSQL database system
+Here's how the project is organized:
 
-## Installing PostgreSQL
-
-### Windows
-1. Download the installer from the [official PostgreSQL website](https://www.postgresql.org/download/windows/)
-2. Run the installer and follow the on-screen instructions
-3. Remember the password you set for the postgres user!
-
-### macOS
-1. The easiest way is to use Homebrew. If you don't have Homebrew, install it first:
-   ```
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   ```
-2. Then install PostgreSQL:
-   ```
-   brew install postgresql
-   ```
-3. Start the PostgreSQL service:
-   ```
-   brew services start postgresql
-   ```
-
-### Linux (Ubuntu/Debian)
-1. Open a terminal
-2. Update your package list:
-   ```
-   sudo apt update
-   ```
-3. Install PostgreSQL:
-   ```
-   sudo apt install postgresql postgresql-contrib
-   ```
-4. The installation process will create a user account called postgres. Switch to this account:
-   ```
-   sudo -i -u postgres
-   ```
-
-## Running the Program
-
-1. Open a terminal
-2. Navigate to the `sql` directory within the `go-vols` project:
-   ```
-   cd path/to/go-vols/sql
-   ```
-3. Connect to the PostgreSQL database (replace `your_database` with an existing database name, often your username):
-   ```
-   psql -d your_database
-   ```
-4. Once in the PostgreSQL prompt, run the script:
-   ```
-   \i go_vols.sql
-   ```
-
-You should see "GO VOLS!" displayed in the query results.
-
-## Understanding the Code
-
-Here's what the `go_vols.sql` file contains:
-
-```sql
--- Create a temporary table and insert 'GO VOLS!'
-CREATE TEMPORARY TABLE go_vols (message TEXT);
-INSERT INTO go_vols VALUES ('GO VOLS!');
-
--- Select and display the message
-SELECT * FROM go_vols;
-
--- Clean up
-DROP TABLE go_vols;
+```
+go-vols/
+├── python/        # Python implementation
+├── javascript/    # JavaScript implementation (using Deno)
+├── rust/          # Rust implementation
+├── sql/           # SQL implementation (for PostgreSQL)
+├── bash/          # Bash implementation
+└── README.md      # This file
 ```
 
-- `CREATE TEMPORARY TABLE` creates a temporary table that will be automatically dropped at the end of the session.
-- `INSERT INTO` adds our "GO VOLS!" message to the table.
-- `SELECT *` retrieves all data from the table, displaying our message.
-- `DROP TABLE` removes the temporary table (though this isn't strictly necessary for a temporary table).
+Each directory contains:
+- The program file(s)
+- A README.md with detailed instructions on how to run the program
 
-## Next Steps
+## Getting Started
 
-Now that you've run your first SQL script, you might want to:
-1. Learn about different SQL data types
-2. Explore more complex SQL queries
-3. Understand database design principles
+### Cloning the Repository
 
-SQL and database management are crucial skills in many areas of software development and data analysis. Keep practicing and exploring!
+If you're new to GitHub, here's how to get this project on your computer:
+
+1. Install Git:
+   - Windows: Download from [git-scm.com](https://git-scm.com/)
+   - Mac: Install Xcode Command Line Tools or use Homebrew
+   - Linux: Use your distribution's package manager (e.g., `sudo apt-get install git` on Ubuntu)
+
+2. Open a terminal (Command Prompt or PowerShell on Windows, Terminal on Mac/Linux)
+
+3. Navigate to where you want to store the project:
+   ```
+   cd path/to/your/projects/folder
+   ```
+
+4. Clone the repository:
+   ```
+   git clone https://github.com/jpotter80/go-vols.git
+   ```
+
+5. Enter the project directory:
+   ```
+   cd go-vols
+   ```
+
+### Running the Programs
+
+Each language directory has its own README.md with specific instructions. Generally:
+
+- **Python**: Run `python go_vols.py` in the python directory
+- **JavaScript**: Run `deno run go_vols.js` in the javascript directory
+- **Rust**: Run `cargo run` in the rust directory
+- **SQL**: Run `psql -d your_database -f go_vols.sql` in the sql directory
+- **Bash**: Run `./go_vols.sh` in the bash directory
+
+Detailed instructions for each language, including how to set up the necessary tools, are in the respective directories.
+
+## Choosing a Language
+
+- If you're completely new to programming, start with Python or JavaScript.
+- If you're interested in web development, try JavaScript.
+- If you want to learn a systems programming language, check out Rust.
+- If you're curious about databases, look at the SQL example.
+- If you want to learn about shell scripting, try the Bash example.
+
+## Contributing
+
+Feel free to add implementations in other programming languages! To contribute:
+
+1. Create a new directory for the language.
+2. Add the source code file(s) and any necessary project files.
+3. Include a README.md with detailed, beginner-friendly instructions.
+4. Update this main README.md with information about the new language.
+
+## About
+
+This project is maintained by [jpotter80](https://github.com/jpotter80). It's inspired by the spirit of the University of Tennessee Volunteers sports teams.
+
+Go Vols!
